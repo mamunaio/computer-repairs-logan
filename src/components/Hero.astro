@@ -1,0 +1,174 @@
+---
+// Component: Hero.astro
+---
+<!-- 2. ABOVE THE FOLD / HERO SECTION (WIREFRAME BLOCK 2) -->
+  <section class="relative pt-10 pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
+    <!-- Ambient Lighting Glows -->
+    <div class="absolute top-10 right-1/4 w-[32rem] h-[32rem] bg-blue-600/10 dark:bg-blue-600/15 rounded-full blur-3xl pointer-events-none pulse-glow-anim"></div>
+    <div class="absolute bottom-10 left-10 w-[30rem] h-[30rem] bg-cyan-500/10 dark:bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Left Column -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Dispatch Live Ticker -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 text-blue-700 dark:text-blue-300 text-xs font-black uppercase tracking-wider shadow-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>🟢 ON-DUTY IN CARINDALE (4152) • $0 SITE ASSESSMENTS</span>
+          </div>
+
+          <!-- Strict Wireframe H1 -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.08]">
+            CCTV &amp; Security Camera Installation in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">Carindale</span>
+          </h1>
+
+          <!-- Strict Wireframe Lead Paragraph -->
+          <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Professionally installed camera systems for local homes and businesses, with tidy cabling, clear night footage, mobile viewing and practical after-installation support.
+          </p>
+
+          <!-- Button Row (Wireframe matching) -->
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="#quote" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-xs uppercase tracking-wider shadow-xl shadow-blue-600/30 inline-flex items-center gap-2.5 transform hover:-translate-y-0.5 transition-all">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Request a CCTV Quote
+            </a>
+
+            <a href="#pricing" class="px-7 py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-white/15 text-slate-800 dark:text-white hover:border-blue-500 font-black text-xs uppercase tracking-wider shadow-sm transition-all inline-flex items-center gap-2">
+              <span>View Packages</span>
+              <span class="text-blue-500">&darr;</span>
+            </a>
+          </div>
+
+          <!-- Rapid Suburb Tag Pills -->
+          <div class="pt-4 border-t border-slate-200 dark:border-white/10 space-y-2">
+            <div class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              Quick Suburb Availability Check:
+            </div>
+            <div class="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-bold">
+              <button onclick="selectSuburbForQuote('Carindale (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carindale</button>
+              <button onclick="selectSuburbForQuote('Carina (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carina</button>
+              <button onclick="selectSuburbForQuote('Carina Heights (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carina Heights</button>
+              <button onclick="selectSuburbForQuote('Belmont (4153)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Belmont</button>
+              <button onclick="selectSuburbForQuote('Mansfield (4122)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Mansfield</button>
+              <button onclick="selectSuburbForQuote('Camp Hill (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Camp Hill</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: High-Tech Interactive 4K Surveillance Monitor -->
+        <div class="lg:col-span-5">
+          <div class="glass-box rounded-3xl p-4 sm:p-5 border-2 border-slate-300 dark:border-white/15 relative overflow-hidden shadow-2xl">
+            
+            <!-- Monitor Frame Bezel -->
+            <div class="rounded-2xl overflow-hidden bg-slate-950 relative border border-slate-800 shadow-2xl">
+              
+              <!-- Monitor Top OSD Bar -->
+              <div class="bg-slate-900/90 backdrop-blur-md px-4 py-2.5 flex items-center justify-between border-b border-white/10 z-20 relative">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                  <span id="cam-active-title" class="text-[11px] font-black text-white tracking-wider font-mono">CAM 01 • DRIVEWAY &amp; FRONT ENTRY</span>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400">
+                  <span class="bg-blue-600/30 text-cyan-400 border border-cyan-500/40 px-2 py-0.5 rounded font-bold">4K UHD</span>
+                  <span class="text-emerald-400 font-bold">REC ●</span>
+                </div>
+              </div>
+
+              <!-- Camera View Screen (Dynamic Switcher) -->
+              <div id="cctv-preview-screen" class="aspect-[16/10] relative overflow-hidden flex flex-col justify-between p-4 transition-all duration-500 bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.35)), url('cctv-ch1-day.jpg');">
+                
+                <!-- Surveillance Scanline -->
+                <div class="absolute inset-0 cctv-scanline"></div>
+
+                <!-- Top OSD Metadata -->
+                <div class="relative z-10 flex justify-between items-start">
+                  <div class="font-mono text-[11px] text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded border border-white/10 flex items-center gap-2">
+                    <span class="text-cyan-400 font-bold">CH1</span>
+                    <span id="cctv-live-clock">2026-09-12 18:42:15</span>
+                  </div>
+
+                  <!-- AI Detection Tag -->
+                  <div id="motion-badge" class="px-2.5 py-1 rounded bg-emerald-950/90 border border-emerald-500/60 text-emerald-300 text-[10px] font-mono font-bold flex items-center gap-1.5 shadow-lg">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span id="ai-detection-label">AI ACUSENSE: VEHICLE</span>
+                  </div>
+                </div>
+
+                <!-- Bounding Box Target Reticle -->
+                <div class="relative z-10 my-auto text-center pointer-events-none">
+                  <div id="cctv-target-box" class="w-40 sm:w-48 h-28 sm:h-32 border-2 border-dashed border-cyan-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-cyan-400/10 backdrop-blur-[1px] transition-all">
+                    <div class="flex justify-between text-[8px] font-mono font-bold text-cyan-300">
+                      <span>98.4% CONF</span>
+                      <span>TARGET: VEHICLE</span>
+                    </div>
+                    <div class="text-[9px] font-mono font-black text-cyan-200 uppercase bg-black/70 px-1.5 py-0.5 rounded mx-auto">
+                      Front Driveway Zone
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom OSD Bar -->
+                <div class="relative z-10 flex items-center justify-between text-[10px] font-mono text-slate-300 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/10">
+                  <span>STORAGE: 3.2TB / 4TB (28 Days)</span>
+                  <span id="vision-mode-indicator" class="text-amber-400 font-bold">MODE: DAY 4K HDR</span>
+                </div>
+
+              </div>
+
+              <!-- Multi-Camera Channel Switcher Buttons -->
+              <div class="bg-slate-900 px-3 py-2 border-t border-white/10 flex items-center justify-between gap-1 text-[11px] font-mono font-bold">
+                <span class="text-slate-400 text-[10px] hidden sm:inline">SWITCH CAM:</span>
+                <div class="grid grid-cols-4 gap-1 w-full sm:w-auto">
+                  <button onclick="switchCamera(1, 'CAM 01 • DRIVEWAY & FRONT ENTRY', 'AI ACUSENSE: VEHICLE')" id="cam-btn-1" class="px-2 py-1 rounded bg-blue-600 text-white transition-all text-center">CH 1</button>
+                  <button onclick="switchCamera(2, 'CAM 02 • PORCH & PACKAGE DROP', 'FACIAL DETECTION: RECOGNISED')" id="cam-btn-2" class="px-2 py-1 rounded bg-slate-800 text-slate-400 hover:text-white transition-all text-center">CH 2</button>
+                  <button onclick="switchCamera(3, 'CAM 03 • SIDE PASSAGEWAY', 'PERIMETER LINE CROSS')" id="cam-btn-3" class="px-2 py-1 rounded bg-slate-800 text-slate-400 hover:text-white transition-all text-center">CH 3</button>
+                  <button onclick="switchCamera(4, 'CAM 04 • REAR ENTERTAINING', 'MOTION: PATIO CLEAR')" id="cam-btn-4" class="px-2 py-1 rounded bg-slate-800 text-slate-400 hover:text-white transition-all text-center">CH 4</button>
+                </div>
+              </div>
+
+              <!-- Interactive Day / Night / Smart IR Vision Selector -->
+              <div class="bg-slate-950 p-3.5 border-t border-white/10 flex items-center justify-between gap-3">
+                <div class="text-xs">
+                  <div class="font-black text-white flex items-center gap-1.5">
+                    <span>Night Vision Demo:</span>
+                    <span class="text-[10px] text-emerald-400 font-bold">Try ColorVu</span>
+                  </div>
+                  <div class="text-[11px] text-slate-400">See real sensor low-light clarity</div>
+                </div>
+
+                <div class="flex items-center gap-1 bg-slate-900 p-1 rounded-xl border border-white/10">
+                  <button id="btn-day" onclick="setCctvVision('day')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all">
+                    ☀️ Day
+                  </button>
+                  <button id="btn-night" onclick="setCctvVision('night')" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all">
+                    🌙 ColorVu
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mobile App Support Chip -->
+            <div class="mt-3.5 p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-white/10 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2.5">
+                <span class="text-xl">📱</span>
+                <div>
+                  <span class="font-black text-sm sm:text-base text-slate-900 dark:text-white">Live Phone Streaming Included</span>
+                  <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Instant push alerts on iPhone, Android &amp; iPad</div>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-black bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                $0 Monthly Fee
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>

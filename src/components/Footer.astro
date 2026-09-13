@@ -1,0 +1,91 @@
+---
+// Component: Footer.astro
+---
+<!-- 15. FOOTER (WIREFRAME BLOCK 15 - 4 COLUMNS) -->
+  <footer class="bg-slate-950 text-slate-300 text-sm sm:text-base border-t border-slate-800 pt-16 pb-24 sm:pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Business Summary & Service Area -->
+        <div class="space-y-4">
+          <a href="#" class="inline-block group" aria-label="Zoo Computer Repairs and CCTV">
+            <img src="zoologo.png" alt="Zoo Computer Repairs &amp; CCTV" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+          </a>
+          <p class="text-slate-400 leading-relaxed text-sm sm:text-base">
+            Professional CCTV and security camera installation for homes and commercial businesses across Carindale, Carina, Belmont, Mansfield and Brisbane East.
+          </p>
+          <div class="text-xs sm:text-sm text-slate-400 font-mono">
+            QLD Security Firm Licence • ACMA Open Cabler
+          </div>
+          <div class="pt-1">
+            <div class="text-xs text-slate-400 uppercase font-bold tracking-wider">Direct Dispatch Phone:</div>
+            <a href="tel:0731000000" class="text-blue-400 hover:text-blue-300 font-extrabold text-base sm:text-lg block mt-0.5">(07) 3100 0000</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-4 text-sm sm:text-base">Services</h4>
+          <ul class="space-y-3 text-sm sm:text-base text-slate-400">
+            <li><a href="#services" class="hover:text-white transition-colors">Home CCTV Installation</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Commercial Business CCTV</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Repairs &amp; Troubleshooting</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Analogue to IP Upgrades</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">BYO Customer Camera Setup</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Active Deterrence &amp; AI</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Information -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-4 text-sm sm:text-base">Information</h4>
+          <ul class="space-y-3 text-sm sm:text-base text-slate-400">
+            <li><a href="#pricing" class="hover:text-white transition-colors">CCTV Packages &amp; Pricing</a></li>
+            <li><a href="#decision-guide" class="hover:text-white transition-colors">Wired vs Wireless Advice</a></li>
+            <li><a href="#projects" class="hover:text-white transition-colors">Recent Carindale Projects</a></li>
+            <li><a href="#why-choose-us" class="hover:text-white transition-colors">Licences &amp; Insurance</a></li>
+            <li><a href="#faqs" class="hover:text-white transition-colors">CCTV Installation FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Business & Legal -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-4 text-sm sm:text-base">Business &amp; Compliance</h4>
+          <ul class="space-y-3 text-sm sm:text-base text-slate-400">
+            <li><a href="#why-choose-us" class="hover:text-white transition-colors">About the Installer</a></li>
+            <li><a href="#quote" class="hover:text-white transition-colors">Contact &amp; Quotes</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li class="pt-2 text-emerald-400 font-bold">✓ $20M Public Liability Insured</li>
+            <li class="text-blue-400 font-bold">✓ 5-Year Workmanship Guarantee</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Suburb Tags & Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm sm:text-base text-slate-400">
+        <div>
+          &copy; 2026 CCTV Carindale (cctvcarindale.com.au). All rights reserved. Registered in Queensland, Australia.
+        </div>
+        <div class="flex items-center gap-4 text-sm sm:text-base">
+          <a href="#main-header" class="hover:text-white transition-colors">Back to Top ↑</a>
+          <span>•</span>
+          <a href="tel:0731000000" class="text-blue-400 font-bold hover:underline">(07) 3100 0000</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY FLOATING QUICK CALL DOCK -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-slate-200 dark:border-white/10 sm:hidden flex items-center gap-2 shadow-2xl">
+    <a href="tel:0731000000" class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-600/25 transition-all">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+      Call (07) 3100 0000
+    </a>
+    <a href="#quote" class="flex-1 py-3.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black text-sm flex items-center justify-center gap-1 shadow-md transition-all">
+      Request Quote
+    </a>
+  </div>

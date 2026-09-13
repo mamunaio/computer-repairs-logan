@@ -1,0 +1,163 @@
+---
+// Component: QuoteForm.astro
+---
+<!-- 14. FINAL CONVERSION BLOCK: REQUEST A CCTV QUOTE (WIREFRAME BLOCK 14) -->
+  <section id="quote" class="py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-box rounded-3xl p-8 sm:p-12 border-2 border-slate-200 dark:border-white/15 relative overflow-hidden shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left Info Column (Strictly matching wireframe) -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest px-3.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800/50">
+              Direct Installation Dispatch
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+              Request a CCTV Quote
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+              Ask only for details that improve the first response. Keep the form usable on mobile and show what happens after submission.
+            </p>
+
+            <!-- Wireframe Inclusions Checklist -->
+            <ul class="space-y-3 text-sm sm:text-base text-slate-700 dark:text-slate-300 pt-2 border-t border-slate-200 dark:border-white/10">
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✓</span>
+                <span><strong>No obligation:</strong> Free detailed written proposal with zero sales pressure.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✓</span>
+                <span><strong>Written scope:</strong> Itemized hardware, storage, and installation breakdown.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✓</span>
+                <span><strong>Clear product and workmanship warranty terms:</strong> Separate equipment (3-Yr) and workmanship (5-Yr) guarantees.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✓</span>
+                <span><strong>Preferred contact method and time:</strong> Choose phone call, SMS or email response at your preferred timing.</span>
+              </li>
+            </ul>
+
+            <div class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/50 text-sm sm:text-base text-slate-700 dark:text-slate-300">
+              Prefer to speak right now? Call our local technician directly: <br>
+              <a href="tel:0731000000" class="text-blue-600 dark:text-blue-400 font-black text-base sm:text-lg block mt-1">(07) 3100 0000</a>
+            </div>
+          </div>
+
+          <!-- Right Interactive Form Column (All fields from wireframe) -->
+          <div class="lg:col-span-7">
+            <form id="cctv-quote-form" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Field: Name -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Your Name *</label>
+                  <input type="text" required id="form-name" name="fullName" placeholder="e.g. David Lin" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+                </div>
+
+                <!-- Field: Suburb / Postcode -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Suburb / Postcode *</label>
+                  <input type="text" required id="form-suburb" name="suburb" placeholder="e.g. Carindale 4152" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Field: Email -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Email Address *</label>
+                  <input type="email" required id="form-email" name="email" placeholder="e.g. name@example.com" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+                </div>
+
+                <!-- Field: Phone / Mobile -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Phone / Mobile Contact *</label>
+                  <input type="tel" required id="form-phone" name="phone" placeholder="e.g. 0400 000 000" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Field: Home / Business / Rental -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Property Type</label>
+                  <select id="form-property" name="propertyType" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500">
+                    <option value="Home / Residential">Home / Residential</option>
+                    <option value="Commercial Business">Commercial Business / Retail</option>
+                    <option value="Rental Property">Rental Property</option>
+                    <option value="Body Corporate / Strata">Body Corporate / Strata</option>
+                  </select>
+                </div>
+
+                <!-- Field: New / Repair / Upgrade / BYO -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Service Required</label>
+                  <select id="form-service" name="serviceType" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500">
+                    <option value="New CCTV Installation">New Complete CCTV System</option>
+                    <option value="BYO Camera Installation">BYO (Customer Supplied) Cameras</option>
+                    <option value="CCTV Repair">Repair Dead / Offline System</option>
+                    <option value="CCTV Upgrade">Upgrade Analogue to 4K Digital</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Field: Approximate Camera Count -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Approximate Camera Count</label>
+                  <select id="form-cameras" name="cameraCount" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500">
+                    <option value="4 Cameras">4 Cameras (Most Popular)</option>
+                    <option value="2-3 Cameras">2 - 3 Cameras</option>
+                    <option value="5-6 Cameras">5 - 6 Cameras</option>
+                    <option value="8+ Cameras">8+ Commercial Cameras</option>
+                    <option value="Need Advice">Not Sure / Recommend to Me</option>
+                  </select>
+                </div>
+
+                <!-- Field: Single or Double Storey -->
+                <div>
+                  <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Storey &amp; Structure</label>
+                  <select id="form-storeys" name="storeys" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500">
+                    <option value="Single Storey">Single Storey</option>
+                    <option value="Double Storey">Double Storey</option>
+                    <option value="Split Level">Split Level / High Ceiling</option>
+                    <option value="Commercial Warehouse/Shop">Commercial Shop / Warehouse</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Field: What would you like the cameras to cover? -->
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">What would you like the cameras to cover? *</label>
+                <textarea id="form-notes" name="notes" rows="3" required placeholder="e.g. Front driveway, side gate, rear shed, package deliveries at front door..." class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-sm sm:text-base uppercase tracking-wider shadow-xl shadow-blue-600/30 transition-all transform hover:-translate-y-0.5">
+                Request Itemised Quote &rarr;
+              </button>
+            </form>
+
+            <!-- Success Confirmation Box -->
+            <div id="quote-success" class="hidden text-center py-8 space-y-4">
+              <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 border border-emerald-500/40 flex items-center justify-center mx-auto">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <h3 class="text-2xl font-black text-slate-900 dark:text-white">Quote Request Received!</h3>
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+                Thank you! Our licensed Carindale security technician will review your property details and contact you shortly with an itemized written quote.
+              </p>
+              <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/10 max-w-sm mx-auto text-sm sm:text-base">
+                Urgent security inquiry? Call us directly:<br>
+                <a href="tel:0731000000" class="text-blue-600 dark:text-blue-400 font-black text-sm block mt-1">(07) 3100 0000</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>

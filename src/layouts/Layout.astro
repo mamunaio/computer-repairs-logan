@@ -1,0 +1,411 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "CCTV & Security Camera Installation in Carindale | CCTV Carindale",
+  description = "Professionally installed CCTV & security camera systems for local homes and businesses in Carindale and surrounding Brisbane East suburbs. Licensed QLD installers, tidy cabling, clear night vision, mobile viewing."
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en-AU" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  
+  <!-- Anti-FOUC Instant Theme Detector (Default: Dark Mode) -->
+  <script is:inline>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('cctv-theme');
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          // Default to Cyber / Command Dark Mode
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com" is:inline></script>
+  <script is:inline>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#070C18',
+              card: '#0F172A',
+              surface: '#1E293B',
+              border: '#334155',
+              blue: '#2563EB',
+              blueHover: '#1D4ED8',
+              cyan: '#06B6D4',
+              amber: '#F59E0B',
+              emerald: '#10B981',
+              red: '#EF4444',
+              // Light tokens
+              lightBg: '#F8FAFC',
+              lightCard: '#FFFFFF',
+              lightSurface: '#F1F5F9',
+              lightBorder: '#E2E8F0',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style is:global>
+    :root {
+      --bg-page: #F8FAFC;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --panel-bg: #F1F5F9;
+      --accent-blue: #2563EB;
+      --accent-cyan: #06B6D4;
+      --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+      --shadow-hover: 0 20px 35px -5px rgba(37, 99, 235, 0.16), 0 10px 10px -5px rgba(37, 99, 235, 0.05);
+      --gradient-glow: rgba(37, 99, 235, 0.08);
+    }
+
+    html.dark {
+      --bg-page: #070C18;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --card-bg: #0F172A;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --panel-bg: #1E293B;
+      --shadow-card: 0 16px 32px -8px rgba(0, 0, 0, 0.6);
+      --shadow-hover: 0 25px 40px -8px rgba(6, 182, 212, 0.25);
+      --gradient-glow: rgba(6, 182, 212, 0.12);
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .glass-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-box:hover {
+      border-color: rgba(37, 99, 235, 0.5);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    /* CCTV Monitor HUD Styling */
+    .cctv-scanline {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+      background-size: 100% 3px, 6px 100%;
+      pointer-events: none;
+    }
+
+    /* Animated Radar Sweep */
+    @keyframes radar-sweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .radar-sweep-anim {
+      animation: radar-sweep 4s linear infinite;
+    }
+
+    /* Pulse Glow */
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+    .pulse-glow-anim {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-page); }
+    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+    html.dark ::-webkit-scrollbar-thumb { background: #334155; }
+    ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+
+    /* Sticky Header Anchor Offset */
+    [id] {
+      scroll-margin-top: 130px;
+    }
+    /* FAQ Accordion Smooth Animation */
+    .faq-accordion-wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-accordion-wrapper.open {
+      grid-template-rows: 1fr;
+    }
+    .faq-accordion-inner {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="selection:bg-blue-500/30 selection:text-blue-800 dark:selection:text-blue-200">
+  <slot />
+
+  <!-- STANDALONE PURE JAVASCRIPT LOGIC -->
+  <script is:inline>
+    // Live Clock Simulator for CCTV OSD
+    function updateCctvClock() {
+      const now = new Date();
+      const pad = n => String(n).padStart(2, '0');
+      const timeStr = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      const clockEl = document.getElementById('cctv-live-clock');
+      if (clockEl) clockEl.textContent = timeStr;
+    }
+    setInterval(updateCctvClock, 1000);
+    updateCctvClock();
+
+    // Multi-Camera Live Surveillance Feeds
+    let currentVisionMode = 'day';
+    let currentChannel = 1;
+
+    const cameraFeeds = {
+      1: {
+        day: 'cctv-ch1-day.jpg',
+        night: 'cctv-ch1-night.jpg',
+        boxStyle: 'w-40 sm:w-48 h-28 sm:h-32 border-2 border-dashed border-cyan-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-cyan-400/10 backdrop-blur-[1px] transition-all',
+        boxConf: '98.4% CONF',
+        boxTarget: 'TARGET: VEHICLE',
+        boxZone: 'Front Driveway Zone'
+      },
+      2: {
+        day: 'cctv-ch2-porch.jpg',
+        night: 'cctv-ch2-porch.jpg',
+        boxStyle: 'w-32 sm:w-36 h-28 sm:h-32 border-2 border-dashed border-emerald-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-emerald-400/10 backdrop-blur-[1px] transition-all',
+        boxConf: '99.1% CONF',
+        boxTarget: 'PACKAGE DROP',
+        boxZone: 'Porch Parcel Area'
+      },
+      3: {
+        day: 'cctv-ch3-side.jpg',
+        night: 'cctv-ch3-side.jpg',
+        boxStyle: 'w-36 sm:w-44 h-32 sm:h-36 border-2 border-dashed border-amber-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-amber-400/10 backdrop-blur-[1px] transition-all',
+        boxConf: 'PERIMETER OK',
+        boxTarget: 'FENCE LINE',
+        boxZone: 'Side Passageway'
+      },
+      4: {
+        day: 'cctv-ch4-patio.jpg',
+        night: 'cctv-ch4-patio.jpg',
+        boxStyle: 'w-44 sm:w-52 h-28 sm:h-32 border-2 border-dashed border-purple-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-purple-400/10 backdrop-blur-[1px] transition-all',
+        boxConf: 'PATIO CLEAR',
+        boxTarget: 'OUTDOOR ZONE',
+        boxZone: 'Rear Entertaining'
+      }
+    };
+
+    function updateCameraDisplay() {
+      const screen = document.getElementById('cctv-preview-screen');
+      const targetBox = document.getElementById('cctv-target-box');
+      const feed = cameraFeeds[currentChannel] || cameraFeeds[1];
+      const imgSrc = currentVisionMode === 'day' ? feed.day : feed.night;
+
+      if (screen) {
+        const overlay = currentVisionMode === 'day' 
+          ? 'linear-gradient(rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.35))'
+          : 'linear-gradient(rgba(2, 6, 23, 0.15), rgba(2, 6, 23, 0.45))';
+        screen.style.backgroundImage = `${overlay}, url('${imgSrc}')`;
+        screen.style.backgroundSize = 'cover';
+        screen.style.backgroundPosition = 'center';
+      }
+
+      if (targetBox) {
+        targetBox.className = feed.boxStyle;
+        const spans = targetBox.querySelectorAll('span');
+        if (spans.length >= 2) {
+          spans[0].textContent = feed.boxConf;
+          spans[1].textContent = feed.boxTarget;
+        }
+        const zoneDiv = targetBox.querySelector('div:last-child');
+        if (zoneDiv) zoneDiv.textContent = feed.boxZone;
+      }
+    }
+
+    function switchCamera(channelNum, title, detectionText) {
+      currentChannel = channelNum;
+      document.getElementById('cam-active-title').textContent = title;
+      document.getElementById('ai-detection-label').textContent = detectionText;
+      
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.getElementById(`cam-btn-${i}`);
+        if (btn) {
+          if (i === channelNum) {
+            btn.className = 'px-2 py-1 rounded bg-blue-600 text-white transition-all text-center';
+          } else {
+            btn.className = 'px-2 py-1 rounded bg-slate-800 text-slate-400 hover:text-white transition-all text-center';
+          }
+        }
+      }
+
+      updateCameraDisplay();
+    }
+
+    function setCctvVision(mode) {
+      currentVisionMode = mode;
+      const indicator = document.getElementById('vision-mode-indicator');
+      const btnDay = document.getElementById('btn-day');
+      const btnNight = document.getElementById('btn-night');
+
+      if (mode === 'day') {
+        indicator.textContent = 'MODE: DAY 4K HDR';
+        indicator.className = 'text-amber-400 font-bold';
+        btnDay.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all';
+        btnNight.className = 'px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all';
+      } else {
+        indicator.textContent = 'MODE: COLORVU NIGHT (F1.0 LOW LIGHT)';
+        indicator.className = 'text-cyan-400 font-bold';
+        btnNight.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-600 text-white transition-all';
+        btnDay.className = 'px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all';
+      }
+
+      updateCameraDisplay();
+    }
+
+    // FAQ Accordion Toggle (Smooth Animated, Auto-collapse others)
+    function toggleFaq(num) {
+      const targetWrapper = document.getElementById('faq-wrapper-' + num);
+      const targetIcon = document.getElementById('faq-icon-' + num);
+      if (!targetWrapper) return;
+
+      const isCurrentlyOpen = targetWrapper.classList.contains('open');
+
+      // Close all other open FAQ accordions
+      document.querySelectorAll('.faq-accordion-wrapper').forEach(wrapper => {
+        wrapper.classList.remove('open');
+      });
+      document.querySelectorAll('[id^="faq-icon-"]').forEach(icon => {
+        icon.textContent = '+';
+      });
+
+      // If clicked FAQ was not already open, expand it
+      if (!isCurrentlyOpen) {
+        targetWrapper.classList.add('open');
+        if (targetIcon) {
+          targetIcon.textContent = '−';
+        }
+      }
+    }
+
+    // Suburb Search Filter
+    function filterSuburbs(val) {
+      const q = val.trim().toLowerCase();
+      document.querySelectorAll('#suburbs-container .suburb-pill').forEach(pill => {
+        const text = pill.textContent.toLowerCase();
+        pill.style.display = text.includes(q) ? 'block' : 'none';
+      });
+    }
+
+    // Prefill Suburb for Quote
+    function selectSuburbForQuote(suburb) {
+      const input = document.getElementById('form-suburb');
+      if (input) {
+        input.value = suburb;
+        document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
+        input.focus();
+      }
+    }
+
+    // Prefill Service for Quote
+    function prefillQuote(serviceName, propertyType) {
+      const servSelect = document.getElementById('form-service');
+      const propSelect = document.getElementById('form-property');
+      const notes = document.getElementById('form-notes');
+
+      if (servSelect) {
+        for (let opt of servSelect.options) {
+          if (serviceName.toLowerCase().includes(opt.value.toLowerCase()) || opt.text.toLowerCase().includes(serviceName.toLowerCase())) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+      if (propSelect && propertyType) {
+        for (let opt of propSelect.options) {
+          if (opt.value.toLowerCase().includes(propertyType.toLowerCase())) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+      if (notes) {
+        notes.value = `Inquiring about: ${serviceName}. Please provide availability and itemized written estimate.`;
+      }
+
+      document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Form Submission Handler
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      document.getElementById('cctv-quote-form').classList.add('hidden');
+      document.getElementById('quote-success').classList.remove('hidden');
+    }
+
+    // Theme Switcher Logic
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      try {
+        localStorage.setItem('cctv-theme', isDark ? 'dark' : 'light');
+      } catch (e) {}
+    }
+
+    // Installation Proof Tab Switcher
+    function setProofTab(tab) {
+      const viewBlueprint = document.getElementById('proof-view-blueprint');
+      const viewRack = document.getElementById('proof-view-rack');
+      const btnBlueprint = document.getElementById('tab-btn-blueprint');
+      const btnRack = document.getElementById('tab-btn-rack');
+
+      if (tab === 'blueprint') {
+        if (viewBlueprint) { viewBlueprint.classList.remove('hidden'); viewBlueprint.classList.add('flex'); }
+        if (viewRack) { viewRack.classList.add('hidden'); viewRack.classList.remove('flex'); }
+        if (btnBlueprint) btnBlueprint.className = 'px-3 py-1.5 rounded-lg font-bold bg-blue-600 text-white shadow-sm transition-all';
+        if (btnRack) btnRack.className = 'px-3 py-1.5 rounded-lg font-bold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all';
+      } else {
+        if (viewRack) { viewRack.classList.remove('hidden'); viewRack.classList.add('flex'); }
+        if (viewBlueprint) { viewBlueprint.classList.add('hidden'); viewBlueprint.classList.remove('flex'); }
+        if (btnRack) btnRack.className = 'px-3 py-1.5 rounded-lg font-bold bg-blue-600 text-white shadow-sm transition-all';
+        if (btnBlueprint) btnBlueprint.className = 'px-3 py-1.5 rounded-lg font-bold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all';
+      }
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
