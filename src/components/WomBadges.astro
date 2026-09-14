@@ -1,0 +1,198 @@
+---
+// Component: WomBadges.astro
+// Word of Mouth (WOM) Customer Service Award Badges (2014 - 2026)
+// Prominently highlighting the 2025 and 2026 awards with official SVG badges.
+// Fully optimized with harmonious Dark and Light theme color tokens.
+
+interface AwardYear {
+  year: string;
+  svg: string;
+  isRecent?: boolean;
+}
+
+const allAwards: AwardYear[] = [
+  { year: '2026', svg: '/2026%20Service%20Award.svg', isRecent: true },
+  { year: '2025', svg: '/2025%20Service%20Award.svg', isRecent: true },
+  { year: '2024', svg: '/2024%20Service%20Award.svg' },
+  { year: '2023', svg: '/2023%20Service%20Award.svg' },
+  { year: '2022', svg: '/2022%20Service%20Award.svg' },
+  { year: '2021', svg: '/2021%20Service%20Award.svg' },
+  { year: '2020', svg: '/2020%20Service%20Award.svg' },
+  { year: '2019', svg: '/2019%20Service%20Award.svg' },
+  { year: '2018', svg: '/2018%20Service%20Award.svg' },
+  { year: '2017', svg: '/2017%20Service%20Award.svg' },
+  { year: '2016', svg: '/2016%20Service%20Award.svg' },
+  { year: '2015', svg: '/2015%20Service%20Award.svg' },
+  { year: '2014', svg: '/2014%20Service%20Award.svg' },
+];
+---
+
+<section id="wom-awards" class="py-16 sm:py-20 relative overflow-hidden bg-slate-100/80 dark:bg-slate-900/50 border-t border-slate-200 dark:border-white/10 transition-colors duration-300">
+  <!-- Soft Ambient Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[42rem] h-72 bg-amber-500/10 dark:bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Heading -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 dark:bg-amber-500/15 border border-amber-500/30 text-amber-700 dark:text-amber-400 text-xs font-black uppercase tracking-wider mb-3.5 shadow-sm">
+        <span class="text-amber-500 dark:text-amber-300">★</span>
+        <span>13 Consecutive Years of Verified Excellence (2014 – 2026)</span>
+        <span class="text-amber-500 dark:text-amber-300">★</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+        Word of Mouth (WOM) Service Awards
+      </h2>
+      <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+        Awarded every single year for over a decade based on authentic customer reviews on Australia's leading independent service directory. Proof of genuine local workmanship and honest communication.
+      </p>
+    </div>
+
+    <!-- FEATURED AWARDS: 2026 & 2025 (Client Explicit Emphasis) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
+      
+      <!-- 2026 Major Featured Award -->
+      <div class="relative group">
+        <!-- Golden Ambient Halo -->
+        <div class="absolute -inset-1 bg-gradient-to-r from-amber-400/20 via-yellow-400/20 to-amber-500/20 dark:from-amber-500/40 dark:via-yellow-400/30 dark:to-amber-600/40 rounded-3xl blur-md group-hover:blur-lg transition-all duration-500"></div>
+        
+        <div class="relative rounded-3xl p-6 sm:p-8 bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-2 border-amber-400/70 shadow-xl shadow-amber-500/5 dark:shadow-2xl flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left h-full transition-all duration-300">
+          
+          <!-- Official 2026 WOM SVG Badge -->
+          <div class="relative shrink-0 flex items-center justify-center p-2 rounded-2xl bg-amber-50/80 dark:bg-gradient-to-b dark:from-amber-500/20 dark:to-transparent border border-amber-200 dark:border-amber-400/30">
+            <img 
+              src="/2026%20Service%20Award.svg" 
+              alt="Word of Mouth 2026 Service Award Badge" 
+              class="w-28 h-28 sm:w-32 sm:h-32 object-contain drop-shadow-[0_8px_16px_rgba(245,158,11,0.25)] dark:drop-shadow-[0_10px_20px_rgba(245,158,11,0.35)] group-hover:scale-105 transition-transform duration-300"
+              loading="eager"
+            />
+            <span class="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-amber-500 text-slate-950 text-[10px] font-black uppercase tracking-wider shadow-md">
+              WINNER
+            </span>
+          </div>
+
+          <!-- Award Text & Highlights -->
+          <div class="space-y-2.5">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-400/15 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-400/40 text-[10px] font-black uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>LATEST 2026 SERVICE AWARD</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+              2026 Service Award Winner
+            </h3>
+            <div class="flex items-center justify-center sm:justify-start gap-1 text-amber-500 dark:text-amber-400 text-sm">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <span class="text-xs text-slate-700 dark:text-slate-300 font-bold ml-1.5">Top-Rated Security Installer</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Awarded for outstanding homeowner reviews, punctual installations, neat Cat6 cabling, and prompt post-handover support across Carindale.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2025 Featured Award -->
+      <div class="relative group">
+        <!-- Cyan/Amber Ambient Halo -->
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-400/15 via-cyan-400/20 to-amber-400/15 dark:from-blue-500/30 dark:via-cyan-400/30 dark:to-amber-500/30 rounded-3xl blur-md group-hover:blur-lg transition-all duration-500"></div>
+        
+        <div class="relative rounded-3xl p-6 sm:p-8 bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-2 border-cyan-500/70 dark:border-cyan-400/60 shadow-xl shadow-cyan-500/5 dark:shadow-2xl flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left h-full transition-all duration-300">
+          
+          <!-- Official 2025 WOM SVG Badge -->
+          <div class="relative shrink-0 flex items-center justify-center p-2 rounded-2xl bg-cyan-50/80 dark:bg-gradient-to-b dark:from-cyan-500/20 dark:to-transparent border border-cyan-200 dark:border-cyan-400/30">
+            <img 
+              src="/2025%20Service%20Award.svg" 
+              alt="Word of Mouth 2025 Service Award Badge" 
+              class="w-28 h-28 sm:w-32 sm:h-32 object-contain drop-shadow-[0_8px_16px_rgba(6,182,212,0.25)] dark:drop-shadow-[0_10px_20px_rgba(6,182,212,0.35)] group-hover:scale-105 transition-transform duration-300"
+              loading="eager"
+            />
+            <span class="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-cyan-500 text-slate-950 text-[10px] font-black uppercase tracking-wider shadow-md">
+              WINNER
+            </span>
+          </div>
+
+          <!-- Award Text & Highlights -->
+          <div class="space-y-2.5">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 dark:bg-cyan-400/15 text-cyan-800 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-400/40 text-[10px] font-black uppercase tracking-wider">
+              <span>🏆 2025 ANNUAL EXCELLENCE</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+              2025 Service Award Winner
+            </h3>
+            <div class="flex items-center justify-center sm:justify-start gap-1 text-amber-500 dark:text-amber-400 text-sm">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <span class="text-xs text-slate-700 dark:text-slate-300 font-bold ml-1.5">5-Star Verified Experience</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Consistently verified for transparent fixed-price quotes, tidy cable concealment through roof cavities, and patient smartphone app tutorials.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 13-YEAR CONTINUOUS TRACK RECORD GRID (2014 to 2026) -->
+    <div class="space-y-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 border-b border-slate-200 dark:border-white/10 pb-3">
+        <h4 class="text-xs font-black uppercase tracking-widest text-slate-700 dark:text-slate-300">
+          Complete Annual Award Archive (2014 – 2026)
+        </h4>
+        <span class="text-[11px] font-bold text-amber-600 dark:text-amber-400 flex items-center gap-1">
+          <span>★★★★★</span>
+          <span>100% Authentic Verified Badges</span>
+        </span>
+      </div>
+
+      <!-- Responsive Grid: 2 cols on mobile, 4 on tablet, 7 on desktop, 13 on 2xl screens -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-13 gap-3 text-center">
+        {allAwards.map((item) => (
+          <div 
+            class={`glass-box p-3 rounded-2xl border transition-all duration-300 group flex flex-col items-center justify-between hover:-translate-y-1.5 ${
+              item.isRecent 
+                ? 'border-amber-400/70 bg-amber-50/70 dark:bg-amber-500/10 shadow-md dark:shadow-lg dark:shadow-amber-500/10' 
+                : 'border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/60 hover:border-amber-400/60 hover:bg-amber-50/50 dark:hover:bg-slate-800/80'
+            }`}
+          >
+            <!-- Badge SVG Thumbnail -->
+            <div class="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-1.5">
+              <img 
+                src={item.svg} 
+                alt={`Word of Mouth ${item.year} Service Award`} 
+                class="w-full h-full object-contain drop-shadow group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+              {item.year === '2026' && (
+                <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900 animate-ping"></span>
+              )}
+            </div>
+
+            <!-- Year Label -->
+            <div class="font-black text-slate-900 dark:text-white text-sm sm:text-base tracking-tight">
+              {item.year}
+            </div>
+
+            <!-- Award Tag -->
+            <div class={`text-[9px] font-extrabold uppercase mt-0.5 ${item.isRecent ? 'text-amber-600 dark:text-amber-400' : 'text-slate-500 dark:text-slate-400 group-hover:text-amber-600 dark:group-hover:text-amber-400'}`}>
+              {item.isRecent ? '★ WINNER' : 'AWARD'}
+            </div>
+
+            <div class="text-[8px] text-amber-500 dark:text-amber-400 font-bold mt-1">
+              ★★★★★
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Trust Endorsement Footer -->
+    <div class="mt-8 text-center">
+      <p class="text-xs text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Word of Mouth (<a href="https://www.womo.com.au" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">womo.com.au</a>) is Australia's premier user-reviewed directory. The Annual Service Awards honor the nation's top 5% highest-rated businesses with consistently outstanding customer feedback.
+      </p>
+    </div>
+
+  </div>
+</section>

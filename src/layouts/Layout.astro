@@ -194,32 +194,32 @@ const {
 
     const cameraFeeds = {
       1: {
-        day: 'cctv-ch1-day.jpg',
-        night: 'cctv-ch1-night.jpg',
+        day: '/cctv-ch1-day.jpg',
+        night: '/cctv-ch1-night.jpg',
         boxStyle: 'w-40 sm:w-48 h-28 sm:h-32 border-2 border-dashed border-cyan-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-cyan-400/10 backdrop-blur-[1px] transition-all',
         boxConf: '98.4% CONF',
         boxTarget: 'TARGET: VEHICLE',
         boxZone: 'Front Driveway Zone'
       },
       2: {
-        day: 'cctv-ch2-porch.jpg',
-        night: 'cctv-ch2-porch.jpg',
+        day: '/cctv-ch2-porch.jpg',
+        night: '/cctv-ch2-porch.jpg',
         boxStyle: 'w-32 sm:w-36 h-28 sm:h-32 border-2 border-dashed border-emerald-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-emerald-400/10 backdrop-blur-[1px] transition-all',
         boxConf: '99.1% CONF',
         boxTarget: 'PACKAGE DROP',
         boxZone: 'Porch Parcel Area'
       },
       3: {
-        day: 'cctv-ch3-side.jpg',
-        night: 'cctv-ch3-side.jpg',
+        day: '/cctv-ch3-side.jpg',
+        night: '/cctv-ch3-side.jpg',
         boxStyle: 'w-36 sm:w-44 h-32 sm:h-36 border-2 border-dashed border-amber-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-amber-400/10 backdrop-blur-[1px] transition-all',
         boxConf: 'PERIMETER OK',
         boxTarget: 'FENCE LINE',
         boxZone: 'Side Passageway'
       },
       4: {
-        day: 'cctv-ch4-patio.jpg',
-        night: 'cctv-ch4-patio.jpg',
+        day: '/cctv-ch4-patio.jpg',
+        night: '/cctv-ch4-patio.jpg',
         boxStyle: 'w-44 sm:w-52 h-28 sm:h-32 border-2 border-dashed border-purple-400 rounded-lg mx-auto relative flex flex-col justify-between p-1 bg-purple-400/10 backdrop-blur-[1px] transition-all',
         boxConf: 'PATIO CLEAR',
         boxTarget: 'OUTDOOR ZONE',
@@ -293,6 +293,12 @@ const {
 
       updateCameraDisplay();
     }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateCameraDisplay);
+    } else {
+      updateCameraDisplay();
+    }
+    document.addEventListener('astro:page-load', updateCameraDisplay);
 
     // FAQ Accordion Toggle (Smooth Animated, Auto-collapse others)
     function toggleFaq(num) {
@@ -367,12 +373,6 @@ const {
       document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Form Submission Handler
-    function handleQuoteSubmit(e) {
-      e.preventDefault();
-      document.getElementById('cctv-quote-form').classList.add('hidden');
-      document.getElementById('quote-success').classList.remove('hidden');
-    }
 
     // Theme Switcher Logic
     function toggleTheme() {
