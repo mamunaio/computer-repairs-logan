@@ -5,3 +5,6 @@ dist/
 .env.production
 .DS_Store
 robert/
+ 
+*.7z
+*.zip
