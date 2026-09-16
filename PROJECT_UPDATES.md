@@ -41,15 +41,18 @@
 
 ---
 
-### 4. Master Cabler Trust Banner (`TrustBanner.astro`)
-* **Mandatory Headline**: Implemented exact copy:
-  > *"Don't pay for an Electrician to hook up your System and Ethernet Cables - We are 1/2 the price and we are an Installed Master Cabler"*
-* **Framed Verification Card**: Added the "Master Cabler License Verification" badge with security hologram pattern, Class 1 & 2 licence tags, and ACMA credentials.
-* **Theme Optimization**: Replaced hardcoded black backgrounds with full Light & Dark mode tokens (clean royal blue/white glass in Light Mode, deep cyber navy in Dark Mode).
+### 4. Master Cabler Standalone Section (`MasterCablerSection.astro`)
+* **Dedicated Standalone Section**: Reorganized from Hero Slide 2 into a dedicated high-impact section situated right below `TrustBadges` and immediately above `FeaturedAwards` ("Queensland Customer Choice Winner").
+* **Mandatory Headline & Content**:
+  > *"Don't Pay an Electrician to Hook Up Your System & Ethernet Cables"*
+  * Includes the professional server rack image card (`/cctv-slide2.jpg`), live dispatch ticker (`🟢 1/2 THE PRICE OF AN ELECTRICIAN • MASTER CABLER`), quote CTA buttons, and suburb availability selector.
 
 ---
 
-### 5. Dedicated Remote Viewing Showcase (`MobileAppViewer.astro`)
+### 5. Single Static Hero Section (`Hero.astro`)
+* Converted the Hero into a clean, single static section focusing purely on **CCTV & Security Camera Installation in Carindale**.
+* Removed carousel slide switching, dot navigation, and auto-play interval scripts for faster loading and rock-solid stability.
+* Preserved the 3-brands night showcase image card (`/3-brands-in-a-single-shot.png`) with concentric hairline borders and 4-sided ambient glow.
 * Relocated the interactive CCTV HUD simulator from the Hero into a dedicated Remote Viewing section.
 * Included interactive camera channel switching, Day/Night vision toggling, AI target detection boxes, and a live OSD timestamp clock.
 

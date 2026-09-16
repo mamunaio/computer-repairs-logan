@@ -1,328 +1,98 @@
 ---
-// Component: Hero.astro (Full Section Slider - Perfect Cross-Fade Carousel)
+// Component: Hero.astro (Single Static Hero Section - 100% Approved Design)
 ---
 <!-- 2. ABOVE THE FOLD / HERO SECTION (WIREFRAME BLOCK 2) -->
-  <section class="relative pt-10 pb-20 lg:pt-14 lg:pb-24 overflow-hidden" id="hero-section-slider">
-    <!-- Ambient Lighting Glows (Authentic Approved Positioning) -->
-    <div class="absolute top-12 right-1/4 w-[32rem] h-[32rem] bg-blue-600/10 dark:bg-blue-600/15 rounded-full blur-3xl pointer-events-none pulse-glow-anim"></div>
-    <div class="absolute bottom-10 left-10 w-[30rem] h-[30rem] bg-cyan-500/10 dark:bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<section class="relative pt-10 pb-20 lg:pt-14 lg:pb-24 overflow-hidden" id="hero-section">
+  <!-- Ambient Lighting Glows -->
+  <div class="absolute top-12 right-1/4 w-[32rem] h-[32rem] bg-blue-600/10 dark:bg-blue-600/15 rounded-full blur-3xl pointer-events-none pulse-glow-anim"></div>
+  <div class="absolute bottom-10 left-10 w-[30rem] h-[30rem] bg-cyan-500/10 dark:bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-    <!-- Slider Stage (Full Section Stacking with Zero Overflow Clipping) -->
-    <div class="relative w-full" id="hero-slider-stage">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Hero Left Column -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Dispatch Live Ticker -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 text-blue-700 dark:text-blue-300 text-xs font-black uppercase tracking-wider shadow-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>🟢 ON-DUTY IN CARINDALE (4152) • $0 SITE ASSESSMENTS</span>
+        </div>
 
-      <!-- ==================== SLIDE 1 (100% EXACT APPROVED DESIGN) ==================== -->
-      <div class="hero-slide transition-opacity duration-700 ease-in-out opacity-100 relative z-10" data-slide-index="0" id="hero-slide-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Strict Wireframe H1 -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.08]">
+          CCTV &amp; Security Camera Installation in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">Carindale</span>
+        </h1>
+
+        <!-- Strict Wireframe Lead Paragraph -->
+        <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+          Professionally installed camera systems for local homes and businesses, with tidy cabling, clear night footage, mobile viewing and practical after-installation support.
+        </p>
+
+        <!-- Button Row -->
+        <div class="pt-2 flex flex-wrap items-center gap-4">
+          <a href="#quote" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-xs uppercase tracking-wider shadow-xl shadow-blue-600/30 inline-flex items-center gap-2.5 transform hover:-translate-y-0.5 transition-all">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Request a CCTV Quote
+          </a>
+
+          <a href="#pricing" class="px-7 py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-white/15 text-slate-800 dark:text-white hover:border-blue-500 font-black text-xs uppercase tracking-wider shadow-sm transition-all inline-flex items-center gap-2">
+            <span>View Packages</span>
+            <span class="text-blue-500">&darr;</span>
+          </a>
+        </div>
+
+        <!-- Rapid Suburb Tag Pills -->
+        <div class="pt-4 border-t border-slate-200 dark:border-white/10 space-y-2">
+          <div class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            Quick Suburb Availability Check:
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-bold">
+            <button onclick="selectSuburbForQuote('Carindale (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300 cursor-pointer">Carindale</button>
+            <button onclick="selectSuburbForQuote('Carina (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300 cursor-pointer">Carina</button>
+            <button onclick="selectSuburbForQuote('Carina Heights (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300 cursor-pointer">Carina Heights</button>
+            <button onclick="selectSuburbForQuote('Belmont (4153)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300 cursor-pointer">Belmont</button>
+            <button onclick="selectSuburbForQuote('Mansfield (4122)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300 cursor-pointer">Mansfield</button>
+            <button onclick="selectSuburbForQuote('Camp Hill (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300 cursor-pointer">Camp Hill</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Right Column: Camera Image Card (100% Unclipped Full View) -->
+      <div class="lg:col-span-5">
+        <div class="relative mx-auto max-w-md lg:max-w-none group">
+          
+          <!-- 1. 360-Degree 4-Side Ambient Glow Halo -->
+          <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500/35 via-blue-600/30 to-cyan-400/35 rounded-[30px] blur-xl opacity-75 group-hover:opacity-100 transition duration-700 pointer-events-none"></div>
+
+          <!-- 2. Concentrated 4-Corner Glow Flares -->
+          <div class="absolute -top-2.5 -left-2.5 w-24 h-24 bg-cyan-400/45 rounded-full blur-xl pointer-events-none"></div>
+          <div class="absolute -top-2.5 -right-2.5 w-24 h-24 bg-blue-500/40 rounded-full blur-xl pointer-events-none"></div>
+          <div class="absolute -bottom-2.5 -left-2.5 w-24 h-24 bg-blue-500/40 rounded-full blur-xl pointer-events-none"></div>
+          <div class="absolute -bottom-2.5 -right-2.5 w-24 h-24 bg-cyan-400/45 rounded-full blur-xl pointer-events-none"></div>
+
+          <!-- 3. Luminous 1.5px Outer Border with Perimeter Glow -->
+          <div class="relative rounded-2xl sm:rounded-3xl p-[1.5px] bg-gradient-to-tr from-cyan-400 via-blue-500/60 to-cyan-300 shadow-[0_0_35px_rgba(6,182,212,0.4),0_15px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_0_50px_rgba(6,182,212,0.55),0_20px_50px_rgba(0,0,0,0.7)] transition-all duration-500">
             
-            <!-- Hero Left Column: Slide 1 -->
-            <div class="lg:col-span-7 space-y-6">
-              
-              <!-- Dispatch Live Ticker -->
-              <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 text-blue-700 dark:text-blue-300 text-xs font-black uppercase tracking-wider shadow-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                <span>🟢 ON-DUTY IN CARINDALE (4152) • $0 SITE ASSESSMENTS</span>
-              </div>
+            <!-- Inner Image Container with Harmonious Symmetrical Aspect Ratio -->
+            <div class="relative rounded-[15px] sm:rounded-[22px] overflow-hidden aspect-[941/1304] bg-slate-950">
+              <img 
+                src="/3-brands-in-a-single-shot.png" 
+                alt="Dahua, Hikvision, and HiLook 4K security cameras professionally installed on Carindale home at night" 
+                class="w-full h-full object-cover object-top transform group-hover:scale-102 transition-transform duration-700"
+                loading="eager"
+              />
 
-              <!-- Strict Wireframe H1 -->
-              <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.08]">
-                CCTV &amp; Security Camera Installation in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">Carindale</span>
-              </h1>
-
-              <!-- Strict Wireframe Lead Paragraph -->
-              <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-                Professionally installed camera systems for local homes and businesses, with tidy cabling, clear night footage, mobile viewing and practical after-installation support.
-              </p>
-
-              <!-- Button Row (Wireframe matching) -->
-              <div class="pt-2 flex flex-wrap items-center gap-4">
-                <a href="#quote" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-xs uppercase tracking-wider shadow-xl shadow-blue-600/30 inline-flex items-center gap-2.5 transform hover:-translate-y-0.5 transition-all">
-                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  Request a CCTV Quote
-                </a>
-
-                <a href="#pricing" class="px-7 py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-white/15 text-slate-800 dark:text-white hover:border-blue-500 font-black text-xs uppercase tracking-wider shadow-sm transition-all inline-flex items-center gap-2">
-                  <span>View Packages</span>
-                  <span class="text-blue-500">&darr;</span>
-                </a>
-              </div>
-
-              <!-- Rapid Suburb Tag Pills -->
-              <div class="pt-4 border-t border-slate-200 dark:border-white/10 space-y-2">
-                <div class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                  Quick Suburb Availability Check:
-                </div>
-                <div class="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-bold">
-                  <button onclick="selectSuburbForQuote('Carindale (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carindale</button>
-                  <button onclick="selectSuburbForQuote('Carina (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carina</button>
-                  <button onclick="selectSuburbForQuote('Carina Heights (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carina Heights</button>
-                  <button onclick="selectSuburbForQuote('Belmont (4153)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Belmont</button>
-                  <button onclick="selectSuburbForQuote('Mansfield (4122)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Mansfield</button>
-                  <button onclick="selectSuburbForQuote('Camp Hill (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Camp Hill</button>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Hero Right Column: Slide 1 Image Card (100% Unclipped Full View) -->
-            <div class="lg:col-span-5">
-              <div class="relative mx-auto max-w-md lg:max-w-none group">
-                
-                <!-- 1. 360-Degree 4-Side Ambient Glow Halo -->
-                <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500/35 via-blue-600/30 to-cyan-400/35 rounded-[30px] blur-xl opacity-75 group-hover:opacity-100 transition duration-700 pointer-events-none"></div>
-
-                <!-- 2. Concentrated 4-Corner Glow Flares -->
-                <div class="absolute -top-2.5 -left-2.5 w-24 h-24 bg-cyan-400/45 rounded-full blur-xl pointer-events-none"></div>
-                <div class="absolute -top-2.5 -right-2.5 w-24 h-24 bg-blue-500/40 rounded-full blur-xl pointer-events-none"></div>
-                <div class="absolute -bottom-2.5 -left-2.5 w-24 h-24 bg-blue-500/40 rounded-full blur-xl pointer-events-none"></div>
-                <div class="absolute -bottom-2.5 -right-2.5 w-24 h-24 bg-cyan-400/45 rounded-full blur-xl pointer-events-none"></div>
-
-                <!-- 3. Luminous 1.5px Outer Border with Perimeter Glow -->
-                <div class="relative rounded-2xl sm:rounded-3xl p-[1.5px] bg-gradient-to-tr from-cyan-400 via-blue-500/60 to-cyan-300 shadow-[0_0_35px_rgba(6,182,212,0.4),0_15px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_0_50px_rgba(6,182,212,0.55),0_20px_50px_rgba(0,0,0,0.7)] transition-all duration-500">
-                  
-                  <!-- Inner Image Container with Harmonious Symmetrical Aspect Ratio -->
-                  <div class="relative rounded-[15px] sm:rounded-[22px] overflow-hidden aspect-[941/1304] bg-slate-950">
-                    <img 
-                      src="/3-brands-in-a-single-shot.png" 
-                      alt="Dahua, Hikvision, and HiLook 4K security cameras professionally installed on Carindale home at night" 
-                      class="w-full h-full object-cover object-top transform group-hover:scale-102 transition-transform duration-700"
-                      loading="eager"
-                    />
-
-                    <!-- Subtle Inner Specular Reflection Line -->
-                    <div class="absolute inset-0 rounded-[15px] sm:rounded-[22px] ring-1 ring-inset ring-white/15 pointer-events-none"></div>
-                  </div>
-
-                </div>
-
-              </div>
+              <!-- Subtle Inner Specular Reflection Line -->
+              <div class="absolute inset-0 rounded-[15px] sm:rounded-[22px] ring-1 ring-inset ring-white/15 pointer-events-none"></div>
             </div>
 
           </div>
+
         </div>
       </div>
 
-      <!-- ==================== SLIDE 2 (MASTER CABLER & ETHERNET SYSTEM HOOKUP) ==================== -->
-      <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none" data-slide-index="1" id="hero-slide-1">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Hero Left Column on Desktop: Master Cabler & Rack Image Card (lg:col-span-5) -->
-            <div class="lg:col-span-5 order-last lg:order-first">
-              <div class="relative mx-auto max-w-md lg:max-w-none group">
-                
-                <!-- 1. 360-Degree 4-Side Ambient Glow Halo -->
-                <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500/35 via-blue-600/30 to-cyan-400/35 rounded-[30px] blur-xl opacity-75 group-hover:opacity-100 transition duration-700 pointer-events-none"></div>
-
-                <!-- 2. Concentrated 4-Corner Glow Flares -->
-                <div class="absolute -top-2.5 -left-2.5 w-24 h-24 bg-cyan-400/45 rounded-full blur-xl pointer-events-none"></div>
-                <div class="absolute -top-2.5 -right-2.5 w-24 h-24 bg-blue-500/40 rounded-full blur-xl pointer-events-none"></div>
-                <div class="absolute -bottom-2.5 -left-2.5 w-24 h-24 bg-blue-500/40 rounded-full blur-xl pointer-events-none"></div>
-                <div class="absolute -bottom-2.5 -right-2.5 w-24 h-24 bg-cyan-400/45 rounded-full blur-xl pointer-events-none"></div>
-
-                <!-- 3. Luminous 1.5px Outer Border with Perimeter Glow -->
-                <div class="relative rounded-2xl sm:rounded-3xl p-[1.5px] bg-gradient-to-tr from-cyan-400 via-blue-500/60 to-cyan-300 shadow-[0_0_35px_rgba(6,182,212,0.4),0_15px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_0_50px_rgba(6,182,212,0.55),0_20px_50px_rgba(0,0,0,0.7)] transition-all duration-500">
-                  
-                  <!-- Inner Image Container with Concentric Curvature -->
-                  <div class="relative rounded-[15px] sm:rounded-[22px] overflow-hidden aspect-[941/1304] bg-slate-950">
-                    <img 
-                      src="/cctv-slide2.jpg" 
-                      alt="Professional wall-mounted network server rack with immaculate blue Cat6 Ethernet cabling and NVR hookup" 
-                      class="w-full h-full object-cover object-center transform group-hover:scale-102 transition-transform duration-700"
-                      loading="lazy"
-                    />
-
-                    <!-- Top-Left Floating Badge: Installed Master Cabler -->
-                    <div class="absolute top-3.5 left-3.5 px-3 py-1.5 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-lg z-10">
-                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                      <span>Installed Master Cabler</span>
-                    </div>
-
-                    <!-- Bottom Floating Specs Strip: System & Ethernet Cables -->
-                    <div class="absolute bottom-3.5 inset-x-3.5 p-3 sm:p-3.5 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-white/15 text-white flex items-center justify-between shadow-2xl z-10">
-                      <div>
-                        <div class="text-xs sm:text-sm font-black tracking-tight text-white flex items-center gap-1.5">
-                          <span>System &amp; Ethernet Hookup</span>
-                          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                        </div>
-                        <p class="text-[11px] text-slate-300 mt-0.5">Tidy Cat6 rack cabling • 1/2 electrician price</p>
-                      </div>
-                      <span class="px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider bg-blue-600/50 text-cyan-300 border border-cyan-400/50 shadow-sm">
-                        Master Cabler
-                      </span>
-                    </div>
-
-                    <!-- Subtle Inner Specular Reflection Line -->
-                    <div class="absolute inset-0 rounded-[15px] sm:rounded-[22px] ring-1 ring-inset ring-white/15 pointer-events-none"></div>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Hero Right Column on Desktop: Slide 2 Text (lg:col-span-7) -->
-            <div class="lg:col-span-7 space-y-6 order-first lg:order-last">
-              
-              <!-- Dispatch Live Ticker -->
-              <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 text-blue-700 dark:text-blue-300 text-xs font-black uppercase tracking-wider shadow-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                <span>🟢 1/2 THE PRICE OF AN ELECTRICIAN • MASTER CABLER</span>
-              </div>
-
-              <!-- Slide 2 Headline (Exact Client Requirement) -->
-              <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.08]">
-                Don't Pay an Electrician to Hook Up Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">System &amp; Ethernet Cables</span>
-              </h2>
-
-              <!-- Slide 2 Lead Paragraph (Exact Client Requirement) -->
-              <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-                We are 1/2 the price and we are an Installed Master Cabler. Get professional Cat6 data cabling, tidy network rack termination, and certified NVR system connections across Carindale.
-              </p>
-
-              <!-- Button Row (Wireframe matching) -->
-              <div class="pt-2 flex flex-wrap items-center gap-4">
-                <a href="#quote" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-xs uppercase tracking-wider shadow-xl shadow-blue-600/30 inline-flex items-center gap-2.5 transform hover:-translate-y-0.5 transition-all">
-                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  Request a CCTV Quote
-                </a>
-
-                <a href="#pricing" class="px-7 py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-white/15 text-slate-800 dark:text-white hover:border-blue-500 font-black text-xs uppercase tracking-wider shadow-sm transition-all inline-flex items-center gap-2">
-                  <span>View Packages</span>
-                  <span class="text-blue-500">&darr;</span>
-                </a>
-              </div>
-
-              <!-- Rapid Suburb Tag Pills -->
-              <div class="pt-4 border-t border-slate-200 dark:border-white/10 space-y-2">
-                <div class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                  Quick Suburb Availability Check:
-                </div>
-                <div class="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-bold">
-                  <button onclick="selectSuburbForQuote('Carindale (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carindale</button>
-                  <button onclick="selectSuburbForQuote('Carina (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carina</button>
-                  <button onclick="selectSuburbForQuote('Carina Heights (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Carina Heights</button>
-                  <button onclick="selectSuburbForQuote('Belmont (4153)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Belmont</button>
-                  <button onclick="selectSuburbForQuote('Mansfield (4122)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Mansfield</button>
-                  <button onclick="selectSuburbForQuote('Camp Hill (4152)')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-500 hover:text-white transition-all text-slate-700 dark:text-slate-300">Camp Hill</button>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    <!-- Centered Dot Navigation (Positioned Cleanly Below Content with Perfect Separation) -->
-    <div class="flex items-center justify-center gap-2 mt-[30px] pt-6 sm:pt-8 pb-1 relative z-20" id="hero-slider-dots">
-      <button type="button" class="hero-dot group p-1 focus:outline-none transition-all duration-300 cursor-pointer" data-index="0" aria-label="Slide 1: CCTV Carindale Installation">
-        <span class="block w-3 h-3 rounded-full transition-all duration-300 bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_10px_rgba(6,182,212,0.9)] ring-2 ring-cyan-400/50 scale-110"></span>
-      </button>
-      <button type="button" class="hero-dot group p-1 focus:outline-none transition-all duration-300 cursor-pointer" data-index="1" aria-label="Slide 2: 4K Night Vision & Security Systems">
-        <span class="block w-3 h-3 rounded-full transition-all duration-300 bg-slate-400/50 dark:bg-slate-700 group-hover:bg-slate-400"></span>
-      </button>
     </div>
-
-  </section>
-
-  <script>
-    // Hero Section Slider (Full Section Cross-Fade Carousel with Dots)
-    function initHeroSectionSlider() {
-      const section = document.getElementById('hero-section-slider');
-      if (!section) return;
-
-      const slides = section.querySelectorAll('.hero-slide');
-      const dots = section.querySelectorAll('.hero-dot');
-      if (slides.length < 2 || dots.length < 2) return;
-
-      let currentIndex = 0;
-      let timer: any = null;
-      const intervalMs = 5000; // Auto-play every 5 seconds
-
-      function setSlide(index: number) {
-        currentIndex = (index + slides.length) % slides.length;
-
-        // Cross-fade the slides
-        slides.forEach((slide, i) => {
-          if (i === currentIndex) {
-            slide.classList.remove('opacity-0', 'z-0', 'pointer-events-none', 'absolute', 'inset-0');
-            slide.classList.add('opacity-100', 'z-10', 'relative', 'pointer-events-auto');
-          } else {
-            slide.classList.remove('opacity-100', 'z-10', 'relative', 'pointer-events-auto');
-            slide.classList.add('opacity-0', 'z-0', 'pointer-events-none', 'absolute', 'inset-0');
-          }
-        });
-
-        // Update dot indicator styles
-        dots.forEach((dot, i) => {
-          const bar = dot.querySelector('span');
-          if (!bar) return;
-          if (i === currentIndex) {
-            bar.className = 'block w-3 h-3 rounded-full transition-all duration-300 bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_10px_rgba(6,182,212,0.9)] ring-2 ring-cyan-400/50 scale-110';
-          } else {
-            bar.className = 'block w-3 h-3 rounded-full transition-all duration-300 bg-slate-400/50 dark:bg-slate-700 group-hover:bg-slate-400';
-          }
-        });
-      }
-
-      function startAutoPlay() {
-        stopAutoPlay();
-        timer = setInterval(() => {
-          setSlide(currentIndex + 1);
-        }, intervalMs);
-      }
-
-      function stopAutoPlay() {
-        if (timer) {
-          clearInterval(timer);
-          timer = null;
-        }
-      }
-
-      // Dot click handling
-      dots.forEach((dot) => {
-        dot.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetIndex = parseInt(dot.getAttribute('data-index') || '0', 10);
-          setSlide(targetIndex);
-          startAutoPlay();
-        });
-      });
-
-      // Pause auto-play on mouse enter, resume on mouse leave
-      section.addEventListener('mouseenter', stopAutoPlay);
-      section.addEventListener('mouseleave', startAutoPlay);
-
-      // Touch swipe support
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      section.addEventListener('touchstart', (e: TouchEvent) => {
-        touchStartX = e.changedTouches[0].screenX;
-        stopAutoPlay();
-      }, { passive: true });
-
-      section.addEventListener('touchend', (e: TouchEvent) => {
-        touchEndX = e.changedTouches[0].screenX;
-        const diffX = touchEndX - touchStartX;
-        if (Math.abs(diffX) > 50) {
-          if (diffX < 0) {
-            setSlide(currentIndex + 1); // Swipe left
-          } else {
-            setSlide(currentIndex - 1); // Swipe right
-          }
-        }
-        startAutoPlay();
-      }, { passive: true });
-
-      startAutoPlay();
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initHeroSectionSlider);
-    } else {
-      initHeroSectionSlider();
-    }
-    document.addEventListener('astro:page-load', initHeroSectionSlider);
-  </script>
+  </div>
+</section>
