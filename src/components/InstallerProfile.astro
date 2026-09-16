@@ -30,35 +30,34 @@
         <!-- Left Column: Portrait & Field Work Photos Showcase (lg:col-span-5) -->
         <div class="lg:col-span-5 space-y-4">
           
-          <!-- 1. Installer Portrait Frame / Placeholder -->
+          <!-- 1. Installer Portrait Frame -->
           <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-blue-500/40 bg-slate-950 shadow-xl group">
-            <div class="aspect-[4/4.5] sm:aspect-[4/4.2] w-full relative overflow-hidden bg-gradient-to-t from-slate-950 via-slate-900 to-slate-800 flex items-center justify-center">
+            <div class="aspect-[4/4.5] sm:aspect-[4/4.2] w-full relative overflow-hidden bg-gradient-to-t from-slate-950 via-slate-900 to-slate-800 flex items-end justify-center">
               
-              <!-- Placeholder Graphic / Portrait Representation -->
-              <div class="text-center p-6 space-y-3">
-                <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full bg-gradient-to-tr from-blue-600 to-cyan-500 p-1 shadow-xl shadow-cyan-500/20">
-                  <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-4xl sm:text-5xl">
-                    👨‍🔧
-                  </div>
-                </div>
-                <div>
-                  <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/40 text-cyan-300 text-xs font-black tracking-wider uppercase">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>Lead Security Installer</span>
-                  </div>
-                  <h3 class="text-xl sm:text-2xl font-black text-white mt-2">Robert H.</h3>
-                  <p class="text-xs sm:text-sm text-slate-300 font-medium">ACMA Master Cabler • QLD Security Installer</p>
-                </div>
-              </div>
+              <!-- Ambient Glow behind Portrait -->
+              <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+              <!-- Installer Portrait Photo (Richard) -->
+              <img 
+                src="/Richard.png" 
+                alt="Richard - Lead Security Installer & ACMA Master Cabler" 
+                class="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-500 relative z-10 drop-shadow-2xl"
+                loading="eager"
+              />
 
               <!-- Top Floating Experience Tag -->
-              <div class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold shadow-lg">
+              <div class="absolute top-3.5 left-3.5 z-20 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold shadow-lg">
                 <span>⭐ 15+ Years Local Experience</span>
               </div>
 
-              <!-- Bottom Floating Caption -->
-              <div class="absolute bottom-3 inset-x-3 p-2.5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-white/10 text-center">
-                <span class="text-[11px] text-slate-300 font-medium">[Installer Portrait Placeholder]</span>
+              <!-- Bottom Profile Info Overlay -->
+              <div class="absolute bottom-3 inset-x-3 z-20 p-3 rounded-xl bg-slate-950/90 backdrop-blur-md border border-white/15 text-center shadow-xl">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-500/20 border border-blue-500/40 text-cyan-300 text-[10px] font-black tracking-wider uppercase mb-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>Lead Security Installer</span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-black text-white">Richard</h3>
+                <p class="text-[11px] text-slate-300 font-medium">ACMA Master Cabler • QLD Security Installer</p>
               </div>
             </div>
           </div>
