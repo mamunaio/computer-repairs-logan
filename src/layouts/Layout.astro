@@ -256,16 +256,18 @@ const {
 
     function switchCamera(channelNum, title, detectionText) {
       currentChannel = channelNum;
-      document.getElementById('cam-active-title').textContent = title;
-      document.getElementById('ai-detection-label').textContent = detectionText;
+      const titleEl = document.getElementById('cam-active-title');
+      if (titleEl) titleEl.textContent = title;
+      const labelEl = document.getElementById('ai-detection-label');
+      if (labelEl) labelEl.textContent = detectionText;
       
       for (let i = 1; i <= 4; i++) {
         const btn = document.getElementById(`cam-btn-${i}`);
         if (btn) {
           if (i === channelNum) {
-            btn.className = 'px-2 py-1 rounded bg-blue-600 text-white transition-all text-center';
+            btn.className = 'px-3.5 py-2 rounded-xl bg-blue-600 text-white transition-all text-center text-xs font-mono font-bold shadow-md cursor-pointer';
           } else {
-            btn.className = 'px-2 py-1 rounded bg-slate-800 text-slate-400 hover:text-white transition-all text-center';
+            btn.className = 'px-3.5 py-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white transition-all text-center text-xs font-mono font-bold cursor-pointer';
           }
         }
       }
@@ -280,15 +282,19 @@ const {
       const btnNight = document.getElementById('btn-night');
 
       if (mode === 'day') {
-        indicator.textContent = 'MODE: DAY 4K HDR';
-        indicator.className = 'text-amber-400 font-bold';
-        btnDay.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all';
-        btnNight.className = 'px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all';
+        if (indicator) {
+          indicator.textContent = 'MODE: DAY 4K HDR';
+          indicator.className = 'text-amber-400 font-bold';
+        }
+        if (btnDay) btnDay.className = 'w-24 sm:w-28 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all cursor-pointer shadow-md flex items-center justify-center gap-1';
+        if (btnNight) btnNight.className = 'w-24 sm:w-28 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all cursor-pointer flex items-center justify-center gap-1';
       } else {
-        indicator.textContent = 'MODE: COLORVU NIGHT (F1.0 LOW LIGHT)';
-        indicator.className = 'text-cyan-400 font-bold';
-        btnNight.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-600 text-white transition-all';
-        btnDay.className = 'px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all';
+        if (indicator) {
+          indicator.textContent = 'MODE: COLORVU NIGHT (F1.0 LOW LIGHT)';
+          indicator.className = 'text-cyan-400 font-bold';
+        }
+        if (btnNight) btnNight.className = 'w-24 sm:w-28 py-1.5 rounded-lg text-xs font-bold bg-cyan-600 text-white transition-all cursor-pointer shadow-md flex items-center justify-center gap-1';
+        if (btnDay) btnDay.className = 'w-24 sm:w-28 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all cursor-pointer flex items-center justify-center gap-1';
       }
 
       updateCameraDisplay();
