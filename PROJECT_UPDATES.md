@@ -29,7 +29,7 @@
 * **In-Place Confirmation UI**: Replaced browser `alert()` popups with an elegant native `#quote-success` confirmation card featuring:
   * Animated emerald checkmark ring.
   * 15–30 min written estimate turnaround notice.
-  * Direct emergency dispatch hotline `(07) 3100 0000`.
+  * Direct emergency dispatch hotline `0410 659 349`.
   * Interactive "Submit another inquiry" form reset toggle.
 * **Spam Protection & UX**: Integrated a honeypot field (`botcheck`) and an active SVG spinner loading state on the submit button.
 
