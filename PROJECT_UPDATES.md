@@ -75,9 +75,26 @@
 
 ---
 
-### 9. Automated Error Audit & Verification
-* **Build Verification**: `npm run build` static generation completed in 2.10s with 0 errors.
-* **Asset Audit**: 21/21 image and SVG assets verified on disk without 404s.
-* **Anchor Links**: 11/11 in-page navigation links matched active destination IDs.
-* **JavaScript Syntax**: 5/5 inline scripts validated with 0 syntax or runtime exceptions.
-* **Git Status**: Pushed cleanly to GitHub `origin/main`.
+### 9. Mobile App Showcase & Active Deterrence Tuning
+* Synchronized slide heights for Day/Night and Dahua TiOC feeds.
+* Added realistic emergency strobe blink animation (`animate-strobe-blink`) to Active Deterrence banner.
+* Standardized Day/ColorVu control button widths.
+
+---
+
+### 10. Carindale Local Service Area, Street Directory & Google Map (`CarindaleServiceArea.astro`)
+* **Heading & Copy Adapted from Reference Site**:
+  * Heading: `CCTV & SECURITY CAMERA INSTALLATION NEAR CARINDALE`
+  * Subheading: `If you've searched CCTV installation near me and you live in Carindale, we are ready to protect your home or business! Reach out today!`
+* **All 285+ Carindale Residential Streets Directory**:
+  * Complete alphabetical directory from `Ablington Way` through `Yeates Close` stored in `src/data/carindaleStreets.ts`.
+  * Displayed in a clean 4-column responsive grid (mobile 2-col, tablet 3-col, desktop 4-col) matching the reference site.
+  * Real-time search filter allowing residents to instantly find their street name.
+  * Smooth expand/collapse toggle showing initial preview with "Show All 285 Carindale Streets" button.
+  * 100% rendered in initial static HTML output for maximum Google local SEO indexing.
+  * Interactive prefill: Clicking any street automatically pre-fills the quote form with the selected street name and scrolls to the quote form.
+* **Embedded Google Map & Territory Switcher**:
+  * Responsive container with active status pulse and quick booking CTA.
+  * Embedded Google My Maps code (`mid=1IU2MaZf-FLJAjKCiUXKW67lZMWg7nv4`) from `computerrepairscarindale.com.au`.
+  * Included interactive switcher button allowing toggle between custom Territory Map (My Maps) and standard clean Carindale QLD 4152 Google Map.
+

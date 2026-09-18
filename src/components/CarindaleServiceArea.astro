@@ -1,0 +1,305 @@
+---
+// Component: CarindaleServiceArea.astro
+import { carindaleStreets } from '../data/carindaleStreets';
+---
+
+<!-- CARINDALE LOCAL SERVICE AREA & STREET DIRECTORY -->
+<section id="service-area" class="py-20 bg-gradient-to-b from-sky-50/70 via-slate-50 to-white dark:from-slate-900/80 dark:via-slate-950 dark:to-slate-900 border-t border-b border-slate-200/80 dark:border-white/5 relative overflow-hidden">
+  <!-- Subtle ambient background glow -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-blue-500/5 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Top Heading & Subtitle matching client request -->
+    <div class="text-center max-w-4xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-950/70 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60 shadow-sm mb-4">
+        <span class="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 animate-pulse"></span>
+        <span>Local Carindale QLD 4152 Service Territory</span>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight uppercase">
+        CCTV & Security Camera Installation Near Carindale
+      </h2>
+
+      <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg mt-3 max-w-3xl mx-auto">
+        If you've searched CCTV installation near me and you live in Carindale, we are ready to protect your home or business! Reach out today!
+      </p>
+
+      <!-- Key Service Highlights -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mt-6 text-xs sm:text-sm font-semibold">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-sm border border-slate-200 dark:border-white/10">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          285+ Carindale Streets Covered
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-sm border border-slate-200 dark:border-white/10">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          Zero Travel Surcharges
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-sm border border-slate-200 dark:border-white/10">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          Same-Week Local Booking
+        </span>
+        <a href="tel:0410659349" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Direct: 0410 659 349
+        </a>
+      </div>
+    </div>
+
+    <!-- STREET DIRECTORY BLOCK -->
+    <div class="bg-white/80 dark:bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-200 dark:border-white/10 p-6 sm:p-8 shadow-xl mb-12">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-white/10">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+            Carindale Residential Streets Directory
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Click your street below to fast-track your free local security camera quotation.
+          </p>
+        </div>
+
+        <!-- Real-time street search -->
+        <div class="w-full md:w-80 relative">
+          <input 
+            type="text" 
+            id="carindale-street-search" 
+            placeholder="Search your street name..." 
+            class="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-300 dark:border-white/15 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+            oninput="filterCarindaleStreets(this.value)"
+          />
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Street Counter Badge -->
+      <div class="flex items-center justify-between mt-4 mb-5 text-xs text-slate-500 dark:text-slate-400">
+        <span id="street-match-count" class="font-semibold text-blue-600 dark:text-blue-400">Showing all 285 Carindale streets</span>
+        <span class="hidden sm:inline">Alphabetical order (A to Z)</span>
+      </div>
+
+      <!-- 4-Column Street Grid (matching client's 4-column layout) -->
+      <div id="streets-grid-wrapper" class="relative max-h-[380px] overflow-hidden transition-all duration-500">
+        <div id="streets-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-2.5">
+          {carindaleStreets.map((street) => (
+            <button
+              type="button"
+              class="street-item group flex items-center justify-between px-3 py-2 rounded-lg bg-sky-50/60 hover:bg-blue-500 dark:bg-slate-800/60 dark:hover:bg-blue-600 border border-sky-100 dark:border-white/5 hover:border-blue-500 text-left transition-all cursor-pointer"
+              data-street={street}
+              onclick={`selectStreetForQuote('${street}')`}
+              title={`Request CCTV installation quote for ${street}, Carindale`}
+            >
+              <span class="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:text-white truncate">
+                {street}
+              </span>
+              <svg class="w-3.5 h-3.5 text-blue-400 group-hover:text-white opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          ))}
+        </div>
+
+        <!-- Gradient Fade when collapsed -->
+        <div id="streets-fade-overlay" class="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-white dark:from-slate-900 pointer-events-none"></div>
+      </div>
+
+      <!-- Expand / Collapse Button -->
+      <div class="text-center mt-6 pt-4 border-t border-slate-100 dark:border-white/5">
+        <button 
+          id="toggle-streets-btn" 
+          type="button"
+          onclick="toggleStreetsExpanded()" 
+          class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-bold border border-blue-200/80 dark:border-white/10 transition-all cursor-pointer shadow-sm"
+        >
+          <span id="toggle-streets-text">Show All 285 Carindale Streets</span>
+          <svg id="toggle-streets-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- EMBEDDED GOOGLE MAP SECTION -->
+    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 bg-slate-900">
+      <!-- Header bar above map -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-3.5 bg-slate-900 border-b border-white/10 text-white">
+        <div class="flex items-center gap-2.5">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+          </span>
+          <span class="text-sm font-bold tracking-wide">Interactive Local Map • Carindale QLD 4152</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- View switcher toggle (My Maps Territory vs Standard Google Map) -->
+          <div class="inline-flex p-0.5 rounded-lg bg-slate-800 border border-white/10 text-xs font-semibold">
+            <button 
+              id="map-btn-mymaps" 
+              type="button"
+              onclick="switchMapSource('mymaps')" 
+              class="px-2.5 py-1 rounded-md bg-blue-600 text-white transition-colors"
+            >
+              Territory Map
+            </button>
+            <button 
+              id="map-btn-std" 
+              type="button"
+              onclick="switchMapSource('std')" 
+              class="px-2.5 py-1 rounded-md text-slate-300 hover:text-white transition-colors"
+            >
+              Carindale 4152 Map
+            </button>
+          </div>
+
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Carindale+QLD+4152" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="hidden md:inline-flex items-center gap-1 text-xs text-blue-300 hover:text-white transition-colors ml-2"
+          >
+            <span>Open in Google Maps</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Embedded Iframe -->
+      <div class="relative w-full h-[450px] sm:h-[480px] bg-slate-950">
+        <iframe
+          id="carindale-map-iframe"
+          src="https://www.google.com/maps/d/embed?mid=1IU2MaZf-FLJAjKCiUXKW67lZMWg7nv4&ehbc=2E312F"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Carindale CCTV Security Camera Coverage Map"
+          class="w-full h-full"
+        ></iframe>
+      </div>
+
+      <!-- Footer under map with direct call to action -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 px-5 py-3.5 bg-slate-950/80 border-t border-white/10 text-xs text-slate-400">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>Fast mobile dispatch from Carindale to all surrounding Brisbane South-East suburbs.</span>
+        </div>
+        <div class="font-semibold text-slate-200">
+          Need CCTV advice today? Call Robert on <a href="tel:0410659349" class="text-blue-400 hover:text-blue-300 font-bold">0410 659 349</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Client-side script for street filtering, expand/collapse, map switcher, and quote prefill -->
+<script is:inline>
+  let streetsExpanded = false;
+
+  function toggleStreetsExpanded() {
+    const wrapper = document.getElementById('streets-grid-wrapper');
+    const overlay = document.getElementById('streets-fade-overlay');
+    const text = document.getElementById('toggle-streets-text');
+    const icon = document.getElementById('toggle-streets-icon');
+    if (!wrapper) return;
+
+    streetsExpanded = !streetsExpanded;
+    if (streetsExpanded) {
+      wrapper.style.maxHeight = 'none';
+      if (overlay) overlay.style.display = 'none';
+      if (text) text.textContent = 'Collapse Street Directory';
+      if (icon) icon.style.transform = 'rotate(180deg)';
+    } else {
+      wrapper.style.maxHeight = '380px';
+      if (overlay) overlay.style.display = 'block';
+      if (text) text.textContent = 'Show All 285 Carindale Streets';
+      if (icon) icon.style.transform = 'rotate(0deg)';
+      wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function filterCarindaleStreets(query) {
+    const q = (query || '').toLowerCase().trim();
+    const items = document.querySelectorAll('.street-item');
+    const wrapper = document.getElementById('streets-grid-wrapper');
+    const overlay = document.getElementById('streets-fade-overlay');
+    const toggleBtn = document.getElementById('toggle-streets-btn');
+    const countBadge = document.getElementById('street-match-count');
+    
+    let visibleCount = 0;
+
+    items.forEach((item) => {
+      const street = (item.getAttribute('data-street') || '').toLowerCase();
+      if (!q || street.includes(q)) {
+        item.style.display = 'flex';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    if (countBadge) {
+      if (!q) {
+        countBadge.textContent = 'Showing all 285 Carindale streets';
+      } else {
+        countBadge.textContent = `Found ${visibleCount} matching street${visibleCount === 1 ? '' : 's'}`;
+      }
+    }
+
+    if (q.length > 0) {
+      // Auto expand to show search results
+      if (wrapper) wrapper.style.maxHeight = 'none';
+      if (overlay) overlay.style.display = 'none';
+      if (toggleBtn) toggleBtn.parentElement.style.display = 'none';
+    } else {
+      if (toggleBtn) toggleBtn.parentElement.style.display = 'block';
+      if (!streetsExpanded) {
+        if (wrapper) wrapper.style.maxHeight = '380px';
+        if (overlay) overlay.style.display = 'block';
+      }
+    }
+  }
+
+  function selectStreetForQuote(street) {
+    const input = document.getElementById('form-suburb');
+    const notes = document.getElementById('form-notes');
+    const formatted = `${street}, Carindale (4152)`;
+    
+    if (input) {
+      input.value = formatted;
+      document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
+      input.focus();
+    } else {
+      document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    if (notes && !notes.value.includes(street)) {
+      notes.value = `Installation inquiry for ${street}, Carindale QLD 4152.\n` + notes.value;
+    }
+  }
+
+  function switchMapSource(type) {
+    const iframe = document.getElementById('carindale-map-iframe');
+    const btnMyMaps = document.getElementById('map-btn-mymaps');
+    const btnStd = document.getElementById('map-btn-std');
+    if (!iframe) return;
+
+    if (type === 'mymaps') {
+      iframe.src = 'https://www.google.com/maps/d/embed?mid=1IU2MaZf-FLJAjKCiUXKW67lZMWg7nv4&ehbc=2E312F';
+      btnMyMaps?.classList.add('bg-blue-600', 'text-white');
+      btnMyMaps?.classList.remove('text-slate-300');
+      btnStd?.classList.remove('bg-blue-600', 'text-white');
+      btnStd?.classList.add('text-slate-300');
+    } else {
+      iframe.src = 'https://maps.google.com/maps?q=Carindale+QLD+4152&t=&z=13&ie=UTF8&iwloc=&output=embed';
+      btnStd?.classList.add('bg-blue-600', 'text-white');
+      btnStd?.classList.remove('text-slate-300');
+      btnMyMaps?.classList.remove('bg-blue-600', 'text-white');
+      btnMyMaps?.classList.add('text-slate-300');
+    }
+  }
+</script>
