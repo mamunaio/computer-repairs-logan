@@ -25,13 +25,14 @@
         Why just film a robbery? Whether it's a new Camera or upgraded your old dated CCTV system &ndash; Our cameras can defend your property perimeter, hitting trespassers with warning lights and loud sirens the second they step foot on your property. Basic systems only give you a copy of the crime that's already been done and they've already gotten away.
       </p>
 
-      <!-- Clean, Elegant Flashing Voice Warning Typography (No Bulky Box) -->
-      <div class="pt-6 pb-2 text-center">
-        <p class="text-xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-red-600 dark:text-[#FF3B30] animate-pulse leading-tight">
+      <!-- Client Requested: Large Flashing Voice Warning (Flashes On & Off) -->
+      <div class="pt-6 pb-2 text-center max-w-4xl mx-auto select-none">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 dark:bg-red-500/15 border border-red-500/30 text-red-600 dark:text-red-400 text-xs font-mono font-bold tracking-widest uppercase mb-3">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+          <span>110dB Autonomous Voice &amp; Siren Deterrent</span>
+        </div>
+        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#FF3B30] animate-strobe-blink leading-tight">
           &ldquo;You&rsquo;re Being Recorded and the Owner Has Been Notified&rdquo;
-        </p>
-        <p class="text-xs text-slate-500 dark:text-slate-400 font-mono mt-2 uppercase tracking-widest">
-          &mdash; 110dB Autonomous Voice &amp; Strobe Deterrent &mdash;
         </p>
       </div>
     </div>
@@ -158,5 +159,33 @@
 
   </div>
 </section>
+
+<!-- Authentic Emergency On/Off Flashing Strobe for Voice Warning -->
+<style>
+  @keyframes alert-strobe-blink {
+    0%, 48% {
+      opacity: 1;
+      text-shadow: 0 0 16px rgba(255, 59, 48, 0.85), 0 0 35px rgba(255, 59, 48, 0.45);
+      filter: drop-shadow(0 0 8px rgba(255, 59, 48, 0.6));
+      transform: scale(1.008);
+    }
+    52%, 96% {
+      opacity: 0.08;
+      text-shadow: none;
+      filter: none;
+      transform: scale(0.995);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 16px rgba(255, 59, 48, 0.85), 0 0 35px rgba(255, 59, 48, 0.45);
+      filter: drop-shadow(0 0 8px rgba(255, 59, 48, 0.6));
+      transform: scale(1.008);
+    }
+  }
+
+  .animate-strobe-blink {
+    animation: alert-strobe-blink 1.5s infinite ease-in-out;
+  }
+</style>
 
 
