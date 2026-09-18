@@ -1,16 +1,16 @@
 <div align="center">
 
-# 🛡️ CCTV Carindale — Professional Security Camera Installation
+# 🛡️ CCTV Logan — Professional Security Camera Installation
 
-**High-converting, modular Astro 5 web platform engineered for local residential and commercial CCTV installation in Carindale (4152) and South-East Brisbane.**
+**High-converting, modular Astro 5 web platform engineered for local residential and commercial CCTV installation in Logan (4141) and the City of Logan.**
 
 [![Astro](https://img.shields.io/badge/Astro-5.0.0-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Web3Forms](https://img.shields.io/badge/Web3Forms-API_Integrated-00C48C?style=for-the-badge&logo=fastapi&logoColor=white)](https://web3forms.com/)
-[![License](https://img.shields.io/badge/QLD_Licence-Class_1_%26_2-blue?style=for-the-badge&logo=shield&logoColor=white)](https://cctvcarindale.com.au)
-[![Compliance](https://img.shields.io/badge/ACMA-Open_Cabler-emerald?style=for-the-badge&logo=checkmarx&logoColor=white)](https://cctvcarindale.com.au)
+[![License](https://img.shields.io/badge/QLD_Licence-Class_1_%26_2-blue?style=for-the-badge&logo=shield&logoColor=white)](https://cctvlogan.com.au)
+[![Compliance](https://img.shields.io/badge/ACMA-Open_Cabler-emerald?style=for-the-badge&logo=checkmarx&logoColor=white)](https://cctvlogan.com.au)
 
-[🌐 Live Production Site](https://cctvcarindale.com.au) • [📑 Report Issue](https://github.com/mamunaio/robert-astro/issues) • [📞 Contact Dispatch: 0410 659 349](tel:0410659349)
+[🌐 Live Production Site](https://cctvlogan.com.au) • [📑 Report Issue](https://github.com/mamunaio/computer-repairs-logan/issues) • [📞 Contact Dispatch: 0410 659 349](tel:0410659349)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## 🚀 Overview
 
-**CCTV Carindale** is an enterprise-grade, lightning-fast landing platform designed to convert local homeowners and business managers seeking professional surveillance installations. 
+**CCTV Logan** is an enterprise-grade, lightning-fast landing platform designed to convert local homeowners and business managers seeking professional surveillance installations across Logan City. 
 
 Built using **Astro 5** static site architecture with clean component separation, this project combines local Australian trust compliance (Queensland Police Service Licensing, ACMA Open Cabler certification, $20M Public Liability insurance) with cutting-edge visual presentation—including dual-theme mode, interactive live camera simulation, real-time quote submission, and fluid micro-animations.
 
@@ -30,7 +30,7 @@ Built using **Astro 5** static site architecture with clean component separation
 * **Command Cyber Dark & Clean Light Themes:** Anti-FOUC (Flash of Unstyled Content) instant localStorage theme detector supporting both cybernetic command-center dark mode and ultra-crisp corporate light mode.
 * **Live CCTV OSD Simulation:** Real-time synchronized camera status overlay with live timestamp clock generator (`HH:MM:SS` 24/7 simulator).
 * **Interactive Active Deterrence Showcase:** Demonstrates flashing red/blue strobe lights and two-way siren deterrence technologies.
-* **Installation Proof & Standards:** Real job-site gallery showcasing wall-mounted Dahua PTZ dome installations (`image8.png`) and clean rack cable management.
+* **Installation Proof & Standards:** Real job-site gallery showcasing wall-mounted Dahua PTZ dome installations (`/image8.png`) and clean rack cable management.
 * **Brand-Themed Floating Action Button:** Floating Back-to-Top button styled with brand gradient glow ring (`#2563EB` to `#06B6D4`), adaptive light/dark glassmorphic core, and auto-hiding scroll controller.
 * **Zero Layout Shift Carousel:** Synchronized hero carousels with matched aspect ratios (`aspect-[941/1304]`) ensuring seamless, jump-free slide cross-fades.
 
@@ -44,7 +44,7 @@ Built using **Astro 5** static site architecture with clean component separation
 ## 📂 Project Architecture
 
 ```text
-e:\cctv-carindale-main\
+computer-repairs-logan/
 ├── public/                          # Static assets, diagrams, and optimized photography
 │   ├── image8.png                   # High-reach Dahua PTZ field installation photo
 │   ├── Cameras That Fight Back.gif  # Active deterrence animated demonstration
@@ -66,10 +66,10 @@ e:\cctv-carindale-main\
 │   │   ├── PricingPackages.astro    # Transparent upfront packages (BYO, 4-Cam, 8-Cam)
 │   │   ├── ProcessSteps.astro       # 4-stage transparent turnkey installation workflow
 │   │   ├── InstallerProfile.astro   # Dedicated local field technician profile & credentials
-│   │   ├── LocalCaseStudy.astro     # Real-world Carindale residential installation story
+│   │   ├── LocalCaseStudy.astro     # Real-world Logan residential installation story
 │   │   ├── Reviews.astro            # Verified Google reviews + formatted installer card
 │   │   ├── FeaturedAwards.astro     # 10+ consecutive years customer satisfaction awards
-│   │   ├── SuburbGrid.astro         # Interactive Brisbane East suburbs serviced pills
+│   │   ├── SuburbGrid.astro         # Interactive Logan suburbs serviced pills
 │   │   ├── Faq.astro                # 12 accessible accordion FAQs with smooth disclosure
 │   │   ├── QuoteForm.astro          # Web3Forms API-powered direct dispatch quote form
 │   │   └── Footer.astro             # Compliance footer, ACMA registration, direct phone
@@ -103,8 +103,8 @@ e:\cctv-carindale-main\
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/mamunaio/robert-astro.git cctv-carindale
-cd cctv-carindale
+git clone https://github.com/mamunaio/computer-repairs-logan.git
+cd computer-repairs-logan
 ```
 
 ### 2. Install Dependencies
@@ -138,8 +138,8 @@ The quote form in [`src/components/QuoteForm.astro`](src/components/QuoteForm.as
 ```html
 <form action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="cd39c6a4-dde5-42ea-88e7-8b438916b485" />
-  <input type="hidden" name="subject" value="New CCTV Installation Quote Request - Carindale" />
-  <input type="hidden" name="from_name" value="CCTV Carindale Dispatch" />
+  <input type="hidden" name="subject" value="New CCTV Installation Quote Request - Logan" />
+  <input type="hidden" name="from_name" value="CCTV Logan Dispatch" />
   <!-- Form input fields -->
 </form>
 ```
@@ -160,4 +160,4 @@ To redirect inquiries to a different inbox, update the `access_key` parameter wi
 
 ## 📄 License & Ownership
 
-&copy; 2026 **CCTV Carindale** ([cctvcarindale.com.au](https://cctvcarindale.com.au)). Operated by Zoo Computer Repairs & CCTV. All rights reserved.
+&copy; 2026 **CCTV Logan** ([cctvlogan.com.au](https://cctvlogan.com.au)). Operated by Zoo Computer Repairs & CCTV. All rights reserved.
