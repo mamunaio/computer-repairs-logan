@@ -7,82 +7,82 @@
       
       <div class="text-center max-w-3xl mx-auto mb-14">
         <span class="text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest px-3.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800/50">
-          Local Brisbane South Coverage
+          Local Logan Coverage
         </span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-3 tracking-tight">
-          CCTV Installation Around Carindale
+          CCTV Installation Around Logan
         </h2>
         <!-- Strict wireframe lead preserved -->
         <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-2">
-          Restrained local grid across Carindale and immediate eastern Brisbane suburbs. Fast mobile dispatch with zero travel surcharges.
+          Restrained local grid across Logan and immediate surrounding Logan City suburbs. Fast mobile dispatch with zero travel surcharges.
         </p>
 
         <!-- Search input for suburbs -->
         <div class="mt-6 max-w-md mx-auto">
-          <input type="text" id="suburb-filter-input" oninput="filterSuburbs(this.value)" placeholder="Search your suburb (e.g. Carindale, Carina, Belmont)..." class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+          <input type="text" id="suburb-filter-input" oninput="filterSuburbs(this.value)" placeholder="Search your suburb (e.g. Logan, Logan Central, Woodridge)..." class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
         </div>
       </div>
 
       <!-- Restrained Suburb Grid (Strictly from wireframe) -->
       <div id="suburbs-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 text-center">
         
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Carindale (4152)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Carindale</div>
-          <div class="text-xs text-blue-600 dark:text-blue-400 font-bold">4152 • Primary</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Logan (4141)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Logan</div>
+          <div class="text-xs text-blue-600 dark:text-blue-400 font-bold">4141 • Primary</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Carina (4152)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Carina</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4152 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Logan Central (4114)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Logan Central</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4114 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Carina Heights (4152)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Carina Heights</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4152 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Woodridge (4114)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Woodridge</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4114 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Belmont (4153)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Belmont</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4153 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Kingston (4114)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Kingston</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4114 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Mansfield (4122)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Mansfield</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4122 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Slacks Creek (4127)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Slacks Creek</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4127 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Camp Hill (4152)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Camp Hill</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4152 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Springwood (4127)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Springwood</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4127 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Mount Gravatt East (4122)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Mt Gravatt East</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4122 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Daisy Hill (4127)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Daisy Hill</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4127 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Cannon Hill (4170)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Cannon Hill</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4170 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Underwood (4119)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Underwood</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4119 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Tingalpa (4173)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Tingalpa</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4173 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Rochedale South (4123)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Rochedale South</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4123 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Holland Park (4121)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Holland Park</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4121 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Browns Plains (4118)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Browns Plains</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4118 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Wishart (4122)')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Wishart</div>
-          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4122 • Covered</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Marsden (4132)')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Marsden</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">4132 • Covered</div>
         </div>
 
-        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Brisbane East Region')">
-          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Brisbane East</div>
+        <div class="suburb-pill glass-box p-3.5 rounded-2xl cursor-pointer hover:border-blue-500 transition-all" onclick="selectSuburbForQuote('Logan City Region')">
+          <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Logan City</div>
           <div class="text-xs text-blue-600 dark:text-blue-400 font-bold">All Suburbs</div>
         </div>
 
